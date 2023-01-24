@@ -40,3 +40,7 @@ $ cat boot.bin kernel.bin > os-image
 #Use your CPU emulutator to run it.
 $ qemu-system-x86_64.exe .\os-image
 ```
+<div>
+<h1>License</h1>
+<p>This project is under <a href="https://github.com/Davy133/DaOS/blob/main/LICENSE">MIT License</a>.</p>
+</div>
