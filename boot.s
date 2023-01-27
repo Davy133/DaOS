@@ -1,6 +1,5 @@
 [org 0x7c00]
 
-
 [bits 16]
 
 KERNEL_OFFSET equ 0x1000
@@ -27,7 +26,7 @@ load_kernel:
     call print_string
 
     mov bx, KERNEL_OFFSET
-    mov dh, 5
+    mov dh, 15
     mov dl, [BOOT_DRIVE]
     call disk_load
     ret
@@ -47,7 +46,6 @@ MSG_PROT_MODE:
     db "Successfully landed in 32-bit Protected Mode.",0
 MSG_REAL_MODE: 
     db "Started in 16-bit Real Mode.",0
-
 
 times 510-($-$$) db 0 
 dw 0xaa55
