@@ -89,7 +89,6 @@ void terminal_write(const char* data, size_t size)
         }else{
             terminal_putchar(data[i]);
         }
-		
     }
 }
  
@@ -99,9 +98,6 @@ void terminal_writestring(const char* data)
 }
 
 extern void main(){
-    
     terminal_initialize();
     terminal_writestring("Hello World!\n");
-    terminal_writestring("Hello World!\n");
-    terminal_writestring("AEMRLO\n");
 }
