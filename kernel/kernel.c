@@ -2,16 +2,9 @@
 #include "types.h"
 
 size_t strlen(const char *buffer){
-    size_t counter = 0;
-    char *b = (char *)"\0";
-    for(;;){
-        if(*buffer == *b){
-            return counter;
-        }else{
-            buffer++;
-            counter++;
-        }
-    }
+    size_t i;
+    for(i=0;buffer[i]!='\0';i++);
+    return i;
 }
 
 enum vga_color{
