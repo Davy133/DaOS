@@ -14,9 +14,8 @@
 
 <div>
 <h1>How to Run</h1>
-<p>In order to run this project you will need an x86_64 Assembler, an machine emulator (like Bochs or Qemu), and to build the OS Image.</p>
+<p>In order to run this project you will need NASM, an machine emulator (like Bochs or Qemu), Make and a <a href="https://wiki.osdev.org/GCC_Cross-Compiler">Cross Compiler.</a>.</p>
 </div>
-
 
 ```bash
 #Clone this repository.
@@ -25,20 +24,8 @@ $ git clone https://github.com/Davy133/DaOS
 #Go into the repository.
 $ cd DaOS
 
-#Build boot.bin.
-$ nasm .\boot.s -f bin -o boot.bin
-
-#Make the kernel object file.
-$ gcc -ffreestanding -c kernel.c -o kernel.o
-
-#Use linker to build an bin file.
-$ ld -o kernel.bin -Ttext 0x1000 kernel.o --oformat binary
-
-#Merge them together.
-$ cat boot.bin kernel.bin > os-image
-
-#Use your CPU emulutator to run it.
-$ qemu-system-x86_64.exe .\os-image
+#Use Make to build it
+$ make os-image
 ```
 <div>
 <h1>License</h1>
