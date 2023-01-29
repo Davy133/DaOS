@@ -14,7 +14,7 @@
 
 <div>
 <h1>How to Run</h1>
-<p>In order to run this project you will need NASM, an machine emulator (like Bochs or Qemu), Make and a <a href="https://wiki.osdev.org/GCC_Cross-Compiler">Cross Compiler.</a>.</p>
+<p>In order to run this project you will need NASM, an machine emulator (like Bochs or Qemu), Make and a <a href="https://wiki.osdev.org/GCC_Cross-Compiler">Cross Compiler</a>.</p>
 </div>
 
 ```bash
